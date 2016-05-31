@@ -1221,7 +1221,7 @@ class SubliminalScript(PostProcessScript, SchedulerScript):
             xref_paths = self.get_files(
                     self.xref_paths,
                     suffix_filter='.srt',
-                    max_depth=1,
+                    max_depth=3,
             )
             # xref_paths = dict([
             #     (basename(k), v) for (k, v) in self.get_files(
@@ -1359,7 +1359,7 @@ class SubliminalScript(PostProcessScript, SchedulerScript):
                 _matches = self.get_files(
                     search_dir=srt_path,
                     regex_filter=srt_regex,
-                    max_depth=1,
+                    max_depth=3,
                 )
                 if not overwrite and len(_matches):
                     self.logger.debug(
